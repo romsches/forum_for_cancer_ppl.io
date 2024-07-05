@@ -1,0 +1,743 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  font-family: "Montserrat", sans-serif; /* Применение шрифта Montserrat к тексту */
+}
+
+/* Стили для контактной страницы */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #6f8aff, #7d2ae8, #4b0082, #0624aa);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.contact-content {
+  width: 800px;
+  background: #7baaca;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 40px auto;
+  perspective: 2700px;
+  text-align: center;
+}
+
+.contact-content h1, .contact-content h2 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.contact-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.contact-content h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.contact-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-content h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+
+.contact-content ul li {
+  margin-bottom: 10px;
+}
+
+.contact-content ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.contact-content ul li a:hover {
+  color: #535bc2;
+}
+
+/* Стили для страницы "Комментарии" */
+.discussion-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #6f8aff, #7d2ae8, #4b0082, #0624aa);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.discussion-content {
+  width: 100%;
+  max-width: 1400px;
+  background: #7baaca; /* Цвет фона контейнера */
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 40px auto; /* Устанавливаем автоматические отступы по бокам */
+  text-align: center; /* Выравниваем содержимое по центру */
+}
+
+/* Удаляем маржины у заголовка */
+.discussion-content .discussion-title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/* Стили для текста обсуждения */
+.discussion-content .discussion-content-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Стили для формы комментариев */
+.discussion-content #discussion-form {
+  margin-top: 20px;
+}
+
+.discussion-content #discussion-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.discussion-content #discussion-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.discussion-content #discussion-form button {
+  margin-bottom: 25px;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #535bc2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.discussion-content #discussion-form button:hover {
+  background-color: #4a52b8;
+}
+
+.comment {
+  background-color: #f0f0f0; /* Цвет фона комментария */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Ширина комментария */
+  text-align: left; /* Выравнивание текста по левому краю */
+  margin-bottom: 20px; /* Отступ снизу */
+  word-wrap: break-word; /* Разрыв слов при необходимости */
+}
+
+.comment:nth-child(even) {
+  margin-left: auto; /* Комментарии с четными номерами смещаются вправо */
+}
+
+.comment:nth-child(odd) {
+  margin-right: auto; /* Комментарии с нечетными номерами смещаются влево */
+}
+
+.comment .comment-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment .comment-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.comment .comment-details {
+  font-size: 14px;
+  color: #777;
+}
+
+.comment .comment-author {
+  margin-bottom: 5px;
+}
+
+.comment .comment-date {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .comment {
+    width: 100%; /* На узких экранах комментарии занимают всю ширину */
+  }
+}
+.notification {
+  background-color: #d4edda; /* Зелёный фон */
+  color: #155724; /* Зелёный текст */
+  border: 1px solid #c3e6cb; /* Зелёная рамка */
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  text-align: center; /* Центрируем текст */
+  max-width: fit-content; /* Автоматический размер в зависимости от содержимого */
+  margin: 10px auto; /* Центрируем по горизонтали и добавляем отступ сверху и снизу */
+}
+
+/* Стили для кнопок пагинации */
+#pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#pagination button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+#pagination button:hover {
+  background-color: #e0e0e0;
+}
+
+#pagination .current-page {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Стили для главной страницы */
+.main {
+  min-height: 100vh; /* Занимает всю высоту видимой области */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Выравниваем по центру по горизонтали */
+  justify-content: center; /* Выравниваем по центру по вертикали */
+  background: linear-gradient(120deg, #6f8aff, #7d2ae8, #4b0082, #0624aa);
+  background-size: 400% 400%; /* Установка размера фона */
+  animation: gradientAnimation 20s ease infinite;
+  margin: 0;
+}
+
+/* Анимация градиента */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Стили для контейнера с контентом */
+.index-content {
+  width: 1400px;
+  background: #7baaca; /* Цвет фона контейнера */
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 40px auto; /* Устанавливаем автоматические отступы по бокам */
+  perspective: 2700px;
+  text-align: center; /* Выравниваем содержимое по центру */
+}
+
+/* Удаляем маржины у заголовков */
+.index-content h1,
+.index-content h2 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+/* Удаляем маржины и отступы у списков */
+.index-content ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Стили для заголовков */
+.index-content h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Стили для абзацев */
+.index-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Стили для второстепенных заголовков */
+.index-content h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 15px;
+  padding-bottom: 5px;
+}
+
+/* Стили для элементов списка */
+.index-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Стили для ссылок внутри списка */
+.index-content ul li a {
+  text-decoration: underline; /* Добавление подчеркивания к ссылкам */
+  color: #333; /* Цвет текста ссылок */
+  transition: color 0.3s; /* Добавляем плавное изменение цвета при наведении */
+}
+
+/* Стили для ссылок при наведении */
+.index-content ul li a:hover {
+  color: #535bc2; /* Цвет текста при наведении на ссылку */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Это предотвратит горизонтальную прокрутку, если есть. */
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #6f8aff, #7d2ae8, #4b0082, #0624aa);
+  background-size: 400% 400%; /* Установка размера фона */
+  animation: gradientAnimation 20s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.auth-container {
+  max-width: 800px; /* Adjust the max-width as needed */
+  width: 100%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 40px 20px; /* Add margin for space between header and footer */
+  perspective: 2700px;
+}
+
+.auth-container .cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+}
+
+.auth-container #flip:checked ~ .cover {
+  transform: rotateY(-180deg);
+}
+
+.auth-container .cover .front,
+.auth-container .cover .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.auth-container .cover .back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.auth-container .cover::before,
+.auth-container .cover::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #7d2ae8;
+  opacity: 0.5;
+  z-index: 12;
+}
+
+.auth-container .cover::after {
+  opacity: 0.3;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.auth-container .cover img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 10;
+}
+
+.auth-container .cover .text {
+  position: absolute;
+  z-index: 130;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container .cover .text .text-1,
+.auth-container .cover .text .text-2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+}
+
+.auth-container .cover .text .text-2 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.auth-container .forms {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.auth-container .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.auth-container .form-content .login-form,
+.auth-container .form-content .signup-form {
+  width: calc(50% - 25px); /* Adjust as needed */
+}
+
+.auth-container .forms .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+  display: inline-block; /* Делаем текст внутри блочным элементом */
+}
+
+.auth-container .forms .form-content .title::after {
+  content: ""; /* Добавляем пустой контент для создания линии */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Регулируем отступ от текста */
+  width: 100%; /* Делаем линию полной ширины */
+  height: 2px; /* Задаем толщину линии */
+  background-color: #7d2ae8; /* Задаем цвет линии */
+}
+
+.auth-container .forms .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+.auth-container .forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+.auth-container .form-content .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.auth-container .form-content .input-box input:focus,
+.auth-container .form-content .input-box input:valid {
+  border-color: #7d2ae8;
+}
+
+.auth-container .form-content .input-box i {
+  position: absolute;
+  color: #7d2ae8;
+  font-size: 17px;
+}
+
+.auth-container .forms .form-content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.auth-container .forms .form-content .text a {
+  text-decoration: none;
+}
+
+.auth-container .forms .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.auth-container .forms .form-content .button {
+  color: #fff;
+  margin-top: 40px;
+}
+
+.auth-container .forms .form-content .button input {
+  color: #fff;
+  background: #7d2ae8;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.auth-container .forms .form-content .button input:hover {
+  background: #5b13b9;
+}
+
+.auth-container .forms .form-content label {
+  color: #5b13b9;
+  cursor: pointer;
+}
+
+.auth-container .forms .form-content label:hover {
+  text-decoration: underline;
+}
+
+.auth-container .forms .form-content .login-text,
+.auth-container .forms .form-content .sign-up-text {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.auth-container #flip {
+  display: none;
+}
+
+/* Добавляем стиль для чекбокса */
+.auth-container .form-content .input-box input[type=checkbox] {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+}
+
+@media (max-width: 730px) {
+  .auth-container .cover {
+    display: none;
+  }
+  .auth-container .form-content .login-form,
+  .auth-container .form-content .signup-form {
+    width: 100%;
+  }
+  .auth-container .form-content .signup-form {
+    display: none;
+  }
+  .auth-container #flip:checked ~ .forms .signup-form {
+    display: block;
+  }
+  .auth-container #flip:checked ~ .forms .login-form {
+    display: none;
+  }
+}
+.article-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #6f8aff, #7d2ae8, #4b0082, #0624aa);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  margin: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.article-content,
+.comments-section {
+  width: 1400px;
+  background: #7baaca;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  text-align: center;
+}
+
+.article-content h1,
+.article-content h2,
+.comments-section h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.article-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#comment-form label {
+  margin-bottom: 5px;
+}
+
+#comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+#comment-form button {
+  padding: 10px 20px;
+  background-color: #535bc2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#comment-form button:hover {
+  background-color: #333;
+}
+
+#comments-list {
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.comment {
+  background: #f1f1f1;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.comment p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Стили для общего контейнера */
+.special-header,
+.special-footer {
+  background-color: #3b4c97; /* Фиолетовый цвет */
+  color: #fff; /* Белый цвет текста */
+  padding: 10px 0; /* Внутренний отступ */
+  text-align: center; /* Выравнивание текста по центру */
+  width: 100%; /* Устанавливаем ширину контейнера на всю доступную ширину */
+  margin: 0 auto; /* Устанавливаем автоматические отступы слева и справа для центрирования */
+  display: flex; /* Располагаем элементы внутри контейнера в одну линию */
+  justify-content: center; /* Выравниваем элементы по горизонтали по центру */
+}
+
+/* Стили для списка в хедере и футере */
+.special-header ul,
+.special-footer ul {
+  list-style-type: none; /* Удаление маркеров */
+  display: flex; /* Отображение элементов списка в одну линию */
+  padding: 0; /* Удаление внутренних отступов */
+}
+
+/* Стили для элементов списка в хедере и футере */
+.special-header ul li,
+.special-footer ul li {
+  margin-right: 20px; /* Добавление горизонтального отступа между элементами списка */
+}
+
+/* Убираем маркеры для ссылок */
+.special-header ul li a,
+.special-footer ul li a {
+  text-decoration: none; /* Удаление подчеркивания у ссылок */
+  color: inherit; /* Наследование цвета текста от родительского элемента */
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,34 @@
+<!-- verify.html -->
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Подтверждение регистрации</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <special-header></special-header>
+    <div class="page-wrapper">
+        <div class="auth-container">
+            <div class="verify-form">
+                <div class="title">Подтверждение регистрации</div>
+                <form id="verifyForm">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-key"></i>
+                            <input type="text" id="verificationCode" placeholder="Введите код подтверждения" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="Подтвердить">
+                        </div>
+                        <div class="text"><a href="#" id="resendLink">Отправить код заново</a></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <special-footer></special-footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

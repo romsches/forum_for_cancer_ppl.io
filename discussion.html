@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комментарии</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <special-header></special-header>
+    <main class="discussion-page">
+        <div class="discussion-content">
+            <h1 class="discussion-title">Обсуждение</h1>
+            <div class="discussion-content-text">
+                <p>Здесь будут обсуждаться различные типы рака.</p>
+            </div>
+            <form id="discussion-form">
+                <div id="nicknameInputBox" style="display: none;">
+                    <label for="nickname">Ваш никнейм:</label>
+                    <input type="text" id="nickname" name="nickname" required>
+                </div>
+                <label for="comment">Оставить комментарий (не более 500 символов):</label>
+                <textarea id="comment" name="comment" rows="5" maxlength="500" required></textarea>
+                <div id="char-count-info">Осталось символов: <span id="char-count">500</span></div>
+                <button type="submit" class="btn-comment">Отправить</button>
+            </form>
+            <div id="discussion-comments-section">
+                <!-- Здесь будут отображаться комментарии -->
+            </div>
+            <div id="pagination">
+                <button id="prev-page" disabled>Предыдущая страница</button>
+                <button id="next-page">Следующая страница</button>
+                <span class="current-page">Страница 1 из 1</span>
+            </div>
+        </div>
+    </main>
+    <special-footer></special-footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="/js/discussion.js"></script>
+</body>
+
+</html>

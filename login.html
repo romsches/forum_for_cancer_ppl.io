@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация и Вход</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Ссылка на Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <special-header></special-header>
+    <div class="page-wrapper">
+        <div class="auth-container">
+            <input type="checkbox" id="flip">
+            <div class="cover">
+                <div class="front">
+                    <img src="/images/freinds_login.jpg" alt="">
+                    <div class="text">
+                        <span class="text-1">Каждый новый друг - это <br> новое приключение</span>
+                        <span class="text-2">Давайте подключимся</span>
+                    </div>
+                </div>
+                <div class="back">
+                    <img class="backImg" src="/images/freinds_login.jpg" alt="">
+                    <div class="text">
+                        <span class="text-1">Пройдите мили пути <br> одним шагом</span>
+                        <span class="text-2">Давайте начнем</span>
+                    </div>
+                </div>
+            </div>
+            <div class="forms">
+                <div class="form-content">
+                    <div class="login-form">
+                        <div class="title">Вход</div>
+                        <form id="loginForm">
+                            <div class="input-boxes">
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="text" id="loginEmail" placeholder="Введите ваш email" required autocomplete="username">
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="loginPassword" placeholder="Введите ваш пароль" required autocomplete="current-password">
+                                </div>
+                                <div class="input-box">
+                                    <input type="checkbox" id="showLoginPassword"> <label for="showLoginPassword">Показать пароль</label>
+                                </div>
+                                <div class="text"><a href="#">Забыли пароль?</a></div>
+                                <div class="button input-box">
+                                    <input type="submit" value="Войти">
+                                </div>
+                                <div id="message"></div> <!-- Добавлено для сообщений -->
+                                <div class="text sign-up-text">Нет аккаунта? <label for="flip">Зарегистрируйтесь</label></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-form">
+                        <div class="title">Регистрация</div>
+                        <form id="registerForm">
+                            <div class="input-boxes">
+                                <div class="input-box">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" placeholder="Введите ваш email" required autocomplete="username">
+                                </div>
+                                <div class="input-box">
+                                    <i class="fas fa-lock"></i>
+                                    <input type="password" id="password" placeholder="Введите ваш пароль" required autocomplete="current-password">
+                                </div>
+                                <div class="input-box">
+                                    <input type="checkbox" id="showPassword"> <label for="showPassword">Показать пароль</label>
+                                </div>
+                                <div class="button input-box">
+                                    <input type="submit" value="Зарегистрироваться">
+                                </div>
+                                <div id="message"></div> <!-- Добавлено для сообщений -->
+                                <div class="text sign-up-text">Уже есть аккаунт? <label for="flip">Войдите сейчас</label></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <special-footer></special-footer>
+    <script src="/js/login.js"></script>
+    <script>
+        // Функция для очистки полей ввода при обновлении страницы
+        window.onload = function() {
+            document.getElementById('registerForm').reset();
+            document.getElementById('loginForm').reset();
+            const messageElement = document.getElementById('message');
+            if (messageElement) {
+                messageElement.textContent = '';
+            }
+        };
+    </script>
+</body>
+</html>
